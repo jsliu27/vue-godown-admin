@@ -2,6 +2,8 @@ import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
 import store from './store';
+// 引入antd组件
+import './components/antd/index';
 
 Vue.config.productionTip = false;
 
