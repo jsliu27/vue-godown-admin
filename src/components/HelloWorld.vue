@@ -23,21 +23,33 @@
     </ul>
     <h3>Ecosystem</h3>
     <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
+      <li
+        v-for="(item, index) in list"
+        :key="index"
+      >
+        <a :href="item.href">{{item.name}}</a>
+      </li>
     </ul>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
+import { userListData } from '@/api/user';
 
 @Component
 export default class HelloWorld extends Vue {
   @Prop() private msg!: string;
+  private list: object[] = [];
+
+  private mounted() {
+    userListData().then((res: any) => {
+      const { code, data, message } = res;
+      if (code === 1) {
+        this.list = data;
+      }
+    });
+  }
 }
 </script>
 

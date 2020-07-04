@@ -1,0 +1,7 @@
+[
+  {"href": "https://router.vuejs.org", "name": "vue-router(模拟数据通过接口返回的)"},
+  {"href": "https://vuex.vuejs.org", "name": "vuex(模拟数据通过接口返回的)"},
+  {"href": "https://github.com/vuejs/vue-devtools#vue-devtools", "name": "vue-devtools(模拟数据通过接口返回的)"},
+  {"href": "https://vue-loader.vuejs.org", "name": "vue-loader(模拟数据通过接口返回的)"},
+  {"href": "https://github.com/vuejs/awesome-vue", "name": "awesome-vue(模拟数据通过接口返回的)"}
+]
