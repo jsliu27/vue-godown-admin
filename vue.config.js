@@ -1,7 +1,7 @@
 // 模拟数据
 const userData = require('./mock/user.json');
 // 自定义主题
-const themeConfig = require('./src/config/theme.Config.ts');
+const themeConfig = require('./src/config/theme.config.ts');
 
 // 文件修改 - 重启项目
 module.exports = {
