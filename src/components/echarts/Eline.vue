@@ -1,15 +1,14 @@
 <template>
-  <section id="myChart" ref="myChart" style="height:500px"></section>
+  <section class="box">
+    <v-chart :options="option"/>
+  </section>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
-// 重点：此位置引入的是你单独配置的echarts
-import echarts from '@/config/echart.config';
 
 @Component
 export default class Eline extends Vue {
-  private pieChart: any;
   private option: object = {
     title: {
       text: '折线图',
@@ -55,17 +54,11 @@ export default class Eline extends Vue {
       },
     ],
   };
-
-  private mounted() {
-    this.draw();
-  }
-  private draw() {
-    this.pieChart = echarts.init(this.$refs.myChart as HTMLCanvasElement);
-    // 下面是具体的配置
-    this.pieChart.setOption(this.option);
-  }
 }
 </script>
-
-<style scoped>
+<style lang="less" scoped>
+.box {
+  width: max-content;
+  margin: 10px auto;
+}
 </style>

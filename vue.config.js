@@ -16,6 +16,11 @@ module.exports = {
       }
     }
   },
+  // https://github.com/ecomfe/vue-echarts/blob/HEAD/README.zh_CN.md
+  transpileDependencies: [
+    'vue-echarts',
+    'resize-detector'
+  ],
   devServer: {
     before(app) {
       app.get('/api/user/list', function (req, res) {

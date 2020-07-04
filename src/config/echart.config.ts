@@ -1,17 +1,16 @@
-// 文件路径 @/lib/echarts.js 自行配置
-// 参考这个地址：https://github.com/apache/incubator-echarts/blob/master/index.js
-// 引入 ECharts 主模块
-// const echarts = require('echarts/lib/echarts');
-// // 引入柱状图等
-// require('echarts/lib/chart/bar');
-// require("echarts/lib/chart/line");
-// require("echarts/lib/chart/pie");
+// https://github.com/ecomfe/vue-echarts/blob/HEAD/README.zh_CN.md
+// 引入Echarts包参考这个地址：https://github.com/apache/incubator-echarts/blob/master/index.js
+import Vue from 'vue';
+import ECharts from 'vue-echarts'; // 在 webpack 环境下指向 components/ECharts.vue
+// 手动引入 ECharts 各模块来减小打包体积
+import 'echarts/lib/chart/line';
+import 'echarts/lib/chart/bar';
+import 'echarts/lib/component/tooltip';
 
-// // 引入提示框和标题组件
-// require('echarts/lib/component/tooltip');
-// require('echarts/lib/component/title');
-// require("echarts/lib/component/dataZoom");
-// require("echarts/lib/component/markPoint");
-// require("echarts/lib/component/markLine");
-import echarts from 'echarts';
-export default echarts;
+// 如果需要配合 ECharts 扩展使用，只需要直接引入扩展包即可
+// 以 ECharts-GL 为例：
+// 需要安装依赖：npm install --save echarts-gl，并添加如下引用
+// import 'echarts-gl';
+
+// 注册组件后即可使用
+Vue.component('v-chart', ECharts);
