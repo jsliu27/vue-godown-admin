@@ -12,7 +12,6 @@ const routes: RouteConfig[] = [
   },
   {
     path: '/',
-    name: 'Home',
     component: Home,
     children: [
       {
@@ -25,19 +24,6 @@ const routes: RouteConfig[] = [
   },
   {
     path: '/',
-    name: 'Home',
-    component: Home,
-    children: [
-      {
-        path: '/shop',
-        name: 'shop',
-        component: () => import( '../views/shop/index.vue'),
-      },
-    ],
-  },
-  {
-    path: '/',
-    name: 'Home',
     component: Home,
     children: [
       {
