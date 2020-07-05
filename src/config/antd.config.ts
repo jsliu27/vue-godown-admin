@@ -10,6 +10,7 @@ import {
   Checkbox,
   Dropdown,
   Avatar,
+  Table,
   message,
 } from 'ant-design-vue';
 
@@ -40,5 +41,7 @@ Vue.component(Checkbox.name, Checkbox);
 Vue.component(Dropdown.name, Dropdown);
 // 头像
 Vue.component(Avatar.name, Avatar);
+// 表格
+Vue.component(Table.name, Table);
 // 全局提示
 Vue.prototype.$message = message;
