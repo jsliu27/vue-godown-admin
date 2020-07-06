@@ -16,6 +16,10 @@ module.exports = {
       }
     }
   },
+  chainWebpack: config => {
+    // 修复HMR
+    config.resolve.symlinks(true);
+  },
   // https://github.com/ecomfe/vue-echarts/blob/HEAD/README.zh_CN.md
   transpileDependencies: [
     'vue-echarts',
