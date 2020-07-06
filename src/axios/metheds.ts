@@ -6,7 +6,7 @@ export default function metheds(instance: any) {
      * @param params 请求的参数
      * @param config 请求的自定义配置
      */
-    get<Promise>(url: string, params?: any, config: object = {}) {
+    get(url: string, params?: any, config: object = {}) {
       return new Promise((resolve, reject) => {
         instance.get(url, {
           params,

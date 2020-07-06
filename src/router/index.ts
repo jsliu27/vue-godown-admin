@@ -9,6 +9,12 @@ const routes: RouteConfig[] = [
     path: '/',
     name: 'Home',
     component: Home,
+    children: [
+      {
+        path: '',
+        component: () => import('../components/HelloWorld.vue'),
+      },
+    ],
   },
   {
     path: '/',

@@ -33,11 +33,12 @@
       </a-layout-sider>
       <a-layout>
         <a-layout-header>
-
-          <a-dropdown>
-            <a class="ant-dropdown-link" @click="e => e.preventDefault()">
-              欢迎您，海老板 <a-avatar size="large" icon="user" />
-            </a>
+          <a-dropdown :trigger="['click']">
+            <span>
+              欢迎您，海老板
+              <a-avatar size="large" icon="user" />
+              <a-icon type="down" />
+            </span>
             <a-menu slot="overlay" @click="dropdown_menu_click">
               <a-menu-item key="detail">
                 查看详情
