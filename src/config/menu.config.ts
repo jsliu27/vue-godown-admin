@@ -27,17 +27,17 @@ export default [
       },
     ],
   },
-  // {
-  //   icon: 'car',
-  //   title: '物流',
-  //   key: 'car',
-  //   children: [
-  //     {
-  //       title: '物流列表',
-  //       key: '/logistics',
-  //     },
-  //   ],
-  // },
+  {
+    icon: 'car',
+    title: '物流',
+    key: 'car',
+    children: [
+      {
+        title: '物流列表',
+        key: '/logistics',
+      },
+    ],
+  },
   {
     icon: 'user',
     title: '用户',
@@ -49,23 +49,20 @@ export default [
       },
     ],
   },
-  // {
-  //   icon: 'pie-chart',
-  //   title: '统计',
-  //   key: 'pie-chart',
-  //   children: [
-  //     {
-  //       title: '仓库信息',
-  //       key: '/godown',
-  //     },
-  //     {
-  //       title: '流量统计',
-  //       key: '/flow',
-  //     },
-  //     {
-  //       title: '交易统计',
-  //       key: '/transaction',
-  //     },
-  //   ],
-  // },
+  {
+    icon: 'pie-chart',
+    title: '统计',
+    key: 'pie-chart',
+    children: [
+      {
+        title: '流量统计',
+        key: '/flow',
+      },
+      {
+        title: '交易统计',
+        key: '/transaction',
+      },
+    ],
+  },
+  // 管理
 ];
