@@ -28,17 +28,6 @@ export default [
     ],
   },
   {
-    icon: 'car',
-    title: '物流',
-    key: 'car',
-    children: [
-      {
-        title: '物流列表',
-        key: '/logistics',
-      },
-    ],
-  },
-  {
     icon: 'user',
     title: '用户',
     key: 'user',
@@ -64,5 +53,15 @@ export default [
       },
     ],
   },
-  // 管理
+  {
+    icon: 'tool',
+    title: '管理',
+    key: 'manage',
+    children: [
+      {
+        title: '人员管理',
+        key: '/meneger',
+      },
+    ],
+  },
 ];

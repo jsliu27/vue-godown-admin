@@ -41,6 +41,24 @@ const routes: RouteConfig[] = [
     ],
   },
   {
+    path: '/',
+    component: Home,
+    children: [
+      {
+        path: '/meneger',
+        name: 'meneger',
+        meta: { subItem: 'manage' },
+        component: () => import('../views/manage/index.vue'),
+      },
+      {
+        path: '/addUser',
+        name: 'addUser',
+        meta: { subItem: 'manage' },
+        component: () => import('../views/manage/AddUser.vue'),
+      },
+    ],
+  },
+  {
     path: '/login',
     name: 'login',
     component: () => import('../views/login/index.vue'),

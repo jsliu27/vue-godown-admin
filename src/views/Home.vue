@@ -114,10 +114,12 @@ export default class App extends Vue {
     const { path, meta } = val;
     this.selectKeys = [path];
     if (meta.subItem) {
+      console.log('this.openkeys==1111=>', this.openkeys);
       this.openkeys = [meta.subItem];
     } else {
       this.openkeys = [];
     }
+    console.log('this.openkeys==2222=>', this.openkeys);
   }
 }
 </script>
