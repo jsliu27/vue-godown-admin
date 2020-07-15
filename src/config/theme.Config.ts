@@ -4,6 +4,7 @@ module.exports = {
   'success-color': '#74eafe', // 成功色
   'warning-color': '#faad14', // 警告色
   'error-color': '#f5222d', // 错误色
+  'table-hover': '#d3eaf7', // table hover 背景色
   'font-size-base': '14px', // 主字号
   'heading-color': 'rgba(0, 0, 0, 0.85)', // 标题色
   'text-color': 'rgba(0, 0, 0, 0.65)', // 主文本色

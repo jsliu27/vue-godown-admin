@@ -7,7 +7,7 @@ import './config/antd.config';
 // 引入echart按需加载
 import './config/echart.config';
 // 引入全局样式
-import './assets/styles/common.less';
+import './assets/styles/index.less';
 
 Vue.config.productionTip = false;
 
