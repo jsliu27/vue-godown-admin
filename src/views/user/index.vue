@@ -1,9 +1,19 @@
 <template>
-  <div>
-    <a-table :columns="columns" :data-source="data">
-      <a slot="name" slot-scope="text">{{ text }}</a>
+  <section class="user">
+    <section class="u_control">
+      <a-button type="primary">
+        Primary
+      </a-button>
+    </section>
+    <a-table
+      :columns="columns"
+      :data-source="data"
+      class="u_table"
+      size="small"
+      >
+      <a slot="name" :href="'#/userDetail?id='+record.key" slot-scope="text, record">{{ text }}</a>
     </a-table>
-  </div>
+  </section>
 </template>
 
 <script lang="ts">
@@ -13,40 +23,57 @@ import { Component, Vue } from 'vue-property-decorator';
 export default class UserList extends Vue {
   private columns: object[] = [
     {
-      title: 'Name',
+      title: 'ID',
+      dataIndex: 'id',
+      key: 'id',
+    },
+    {
+      title: '用户名',
       dataIndex: 'name',
       key: 'name',
       scopedSlots: { customRender: 'name' },
     },
     {
-      title: 'Age',
-      dataIndex: 'age',
-      key: 'age',
+      title: '登陆名',
+      dataIndex: 'loginName',
+      key: 'loginName',
+    },
+    {
+      title: '密码',
+      dataIndex: 'password',
+      key: 'password',
+    },
+    {
+      title: '状态',
+      dataIndex: 'status',
+      key: 'status',
       width: 80,
     },
     {
-      title: 'Address',
-      dataIndex: 'address',
-      key: 'address 1',
-      ellipsis: true,
+      title: '性别',
+      dataIndex: 'sex',
+      key: 'sex',
+      width: 80,
     },
     {
-      title: 'Long Column Long Column Long Column',
-      dataIndex: 'address',
-      key: 'address 2',
-      ellipsis: true,
+      title: '手机号',
+      dataIndex: 'phone',
+      key: 'phone',
     },
     {
-      title: 'Long Column Long Column',
-      dataIndex: 'address',
-      key: 'address 3',
-      ellipsis: true,
+      title: '邮箱',
+      dataIndex: 'email',
+      key: 'email',
     },
     {
-      title: 'Long Column',
-      dataIndex: 'address',
-      key: 'address 4',
-      ellipsis: true,
+      title: '创建时间',
+      dataIndex: 'createTime',
+      key: 'createTime',
+    },
+    {
+      title: '更新时间',
+      dataIndex: 'updateTime',
+      key: 'updateTime',
     },
   ];
   private data: object[] = [
@@ -74,3 +101,10 @@ export default class UserList extends Vue {
   ];
 }
 </script>
+<style lang="less" scoped>
+.user {
+  .u_control {
+    margin-bottom: 10px;
+  }
+}
+</style>
