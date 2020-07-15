@@ -38,6 +38,12 @@ const routes: RouteConfig[] = [
         meta: { subItem: 'user' },
         component: () => import('../views/user/index.vue'),
       },
+      {
+        path: '/userDetail',
+        name: 'userDetail',
+        meta: { subItem: 'user' },
+        component: () => import('../views/user/userDetail.vue'),
+      },
     ],
   },
   {

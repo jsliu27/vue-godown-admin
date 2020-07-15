@@ -112,14 +112,12 @@ export default class App extends Vue {
   @Watch('$route', { immediate: true, deep: true })
   private getRuoutePath(val: any, oldVal: any) {
     const { path, meta } = val;
-    this.selectKeys = [path];
+    this.selectKeys = ['/' + meta.subItem];
     if (meta.subItem) {
-      console.log('this.openkeys==1111=>', this.openkeys);
       this.openkeys = [meta.subItem];
     } else {
       this.openkeys = [];
     }
-    console.log('this.openkeys==2222=>', this.openkeys);
   }
 }
 </script>
