@@ -7,7 +7,7 @@
         >
         <a-form-item>
           <a-input
-            v-decorator="rulesLogin.userName"
+            v-decorator="rulesLogin.loginName"
             placeholder="登录名"
             @pressEnter='()=> $refs.pwd.focus()'
           >
@@ -16,9 +16,9 @@
         </a-form-item>
         <a-form-item>
           <a-input
-            v-decorator="rulesLogin.password"
+            v-decorator="rulesLogin.passWord"
             ref="pwd"
-            type="password"
+            type="passWord"
             placeholder="密码"
             @pressEnter='login_handle'
           >
@@ -49,12 +49,12 @@ export default class Login extends Vue {
   private formLogin: any;
   // 表单校验
   private rulesLogin: object = {
-    userName: [
-      'userName',
+    loginName: [
+      'loginName',
       { rules: [{ required: true, message: '登录名不能为空' }] },
     ],
-    password: [
-      'password',
+    passWord: [
+      'passWord',
       { rules: [
         { required: true, message: '密码不能为空' },
         ],
@@ -76,11 +76,16 @@ export default class Login extends Vue {
         this.iconLoading = true;
         // 调用用户登录的接口
         userLogin(values).then((res: any) => {
+          const { success, data, message } = res;
+          if (success) {
+            // 保存token
+            sessionStorage.setItem('token', '123456789');
+            // 跳转到首页
+            this.$router.push('/');
+          } else {
+            this.$message.error(message);
+          }
           this.iconLoading = false;
-          // 保存token
-          sessionStorage.setItem('token', '123456789');
-          // 跳转到首页
-          this.$router.push('/');
         }).catch((error: any) => {
           console.log(error);
           this.iconLoading = false;
