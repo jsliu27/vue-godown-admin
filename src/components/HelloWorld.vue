@@ -31,12 +31,12 @@ export default class HelloWorld extends Vue {
   private list: object[] = [];
 
   private mounted() {
-    userListData().then((res: any) => {
-      const { code, data, message } = res;
-      if (code === 1) {
-        this.list = data;
-      }
-    });
+    // userListData().then((res: any) => {
+    //   const { code, data, message } = res;
+    //   if (code === 1) {
+    //     this.list = data;
+    //   }
+    // });
   }
 }
 </script>
