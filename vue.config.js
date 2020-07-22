@@ -25,15 +25,15 @@ module.exports = {
     'vue-echarts',
     'resize-detector'
   ],
-  // devServer: {
-  //   before(app) {
-  //     app.get('/user/list', function (req, res) {
-  //       res.json({
-  //         code: 1,
-  //         data: userData,
-  //         message:''
-  //       })
-  //     })
-  //   }
-  // }
+  devServer: {
+    before(app) {
+      app.get('/user/list', function (req, res) {
+        res.json({
+          code: 1,
+          data: userData,
+          message:''
+        })
+      })
+    }
+  }
 }

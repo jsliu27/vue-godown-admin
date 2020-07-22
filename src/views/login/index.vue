@@ -75,16 +75,21 @@ export default class Login extends Vue {
       if (!err) {
         this.iconLoading = true;
         // 调用用户登录的接口
-        userLogin(values).then((res: any) => {
-          this.iconLoading = false;
-          // 保存token
-          sessionStorage.setItem('token', '123456789');
-          // 跳转到首页
-          this.$router.push('/');
-        }).catch((error: any) => {
-          console.log(error);
-          this.iconLoading = false;
-        });
+        // userLogin(values).then((res: any) => {
+        //   this.iconLoading = false;
+        //   const { data, message, success } = res;
+        //   if (success) {
+            // 保存token
+            sessionStorage.setItem('token', '123');
+            // 跳转到首页
+            this.$router.push('/');
+        //   } else {
+        //     this.$message.error(message);
+        //   }
+        // }).catch((error: any) => {
+        //   console.log(error);
+        //   this.iconLoading = false;
+        // });
       }
     });
   }

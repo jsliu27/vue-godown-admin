@@ -7,11 +7,11 @@ Vue.use(VueRouter);
 const routes: RouteConfig[] = [
   {
     path: '/',
-    name: 'Home',
     component: Home,
     children: [
       {
         path: '',
+        name: 'home',
         component: () => import('../components/HelloWorld.vue'),
       },
     ],
