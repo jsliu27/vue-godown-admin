@@ -1,39 +1,29 @@
 # vue-godown-admin
 
-## Project setup
-```
+> 用户自己学习和跟后端一起学习
+
+## 跟后端一起学习
+
+> master 分支
+
+### 恢复依赖
+
+```bash
 npm install
 ```
 
-### Compiles and hot-reloads for development
-```
+### 运行
+
+```bash
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## 自己练习
 
-### Run your tests
-```
-npm run test
-```
+> demo 分支 (没有后端接口自己mock数据)
 
-### Lints and fixes files
-```
-npm run lint
-```
+### 克隆地址
 
-### Run your end-to-end tests
+```bash
+git clone -b demo https://github.com/jsliu27/vue-godown-admin.git
 ```
-npm run test:e2e
-```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
